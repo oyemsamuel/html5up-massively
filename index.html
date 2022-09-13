@@ -164,7 +164,7 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form id="fillin" method="post" action="index.html">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
@@ -225,6 +225,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				var form = document.getElementById("fillin")
+
+				form.addEventListener("submit",function(event){
+					event.preventDefault()
+
+					var name = document.getElementById("name").value
+					console.log(name)
+					var email = document.getElementById("email").value
+					console.log(email)
+					var message= document.getElementById("message").value
+					console.log(message)
+				})
+			</script>
 
 	</body>
 </html>
